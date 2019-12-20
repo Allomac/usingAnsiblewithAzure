@@ -17,7 +17,7 @@
         * [Ansible Solution Template](https://docs.microsoft.com/en-us/azure/ansible/ansible-deploy-solution-template)
         * [Install Ansible on an Azure Linux virtual machine](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ansible-install-configure?toc=%2Fazure%2Fansible%2Ftoc.json&bc=%2Fazure%2Fbread%2Ftoc.json#install-ansible-on-an-azure-linux-virtual-machine)
 
-### [Connect to Azure from Ansible](https://dev.to/joshduffney/connecting-to-azure-with-ansible-22g2)
+## [Connect to Azure from Ansible](https://dev.to/joshduffney/connecting-to-azure-with-ansible-22g2)
 
 *Required Information*
 
@@ -51,4 +51,30 @@ export AZURE_SECRET=<security-principal-password>
 export AZURE_TENANT=<security-principal-tenant>
 ```
 
-### 
+## Getting Started
+
+### Create an Azure Resource Group with Ansible
+
+1. Create the playbook
+    ```
+    vi playbook
+    ```
+2.  Paste in playbook contents.
+    ```yaml
+    ---
+    - hosts: localhost
+    connection: local
+    tasks:
+        - name: Create resource group
+        azure_rm_resourcegroup:
+            name: ansible-rg
+            location: eastus
+        register: rg
+        - debug:
+            var: rg
+    ```
+3. Run the playbook using ansible-playbook.
+    ```
+    ansible-playbook playbook.yaml
+    ```
+
