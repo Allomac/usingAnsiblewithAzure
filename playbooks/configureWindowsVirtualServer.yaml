@@ -2,7 +2,7 @@
 - hosts: all
   vars:
     ansible_user: azureuser
-    ansible_password: P@ssw0rd12344321
+    ansible_password: ''
     ansible_connection: winrm
     ansible_winrm_transport: ntlm
     ansible_winrm_server_cert_validation: ignore
