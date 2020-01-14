@@ -1,0 +1,20 @@
+{
+"publicipaddresses": [
+    {
+        "allocation_method": "static", 
+        "dns_settings": {}, 
+        "etag": "W/\"0573d101-75c3-4fb1-878e-45180cb42821\"", 
+        "id": "/subscriptions/dc4a17ec-4363-4f1e-b019-e71a4a15dc1c/resourceGroups/ansible-rg/providers/Microsoft.Network/publicIPAddresses/webPublicIP", 
+        "idle_timeout": 4, 
+        "ip_address": "40.71.190.61", 
+        "ip_tags": {}, 
+        "location": "eastus", 
+        "name": "webPublicIP", 
+        "provisioning_state": "Succeeded", 
+        "sku": "Basic", 
+        "tags": null, 
+        "type": "Microsoft.Network/publicIPAddresses", 
+        "version": "ipv4"
+    }
+]
+}
